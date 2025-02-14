@@ -1,8 +1,12 @@
 from __future__ import annotations
 import copy
 
-from grid_path_planning.algorithms.a_star import SearchGrid, Position2D, PositionSequence, AstarGridSearch
-
+from grid_path_planning.algorithms.a_star import (
+    SearchGrid,
+    Position2D,
+    PositionSequence,
+    AstarGridSearch,
+)
 
 
 class SkeletonPathGenerator:
@@ -19,7 +23,7 @@ class SkeletonPathGenerator:
             path = AstarGridSearch.search(grid, src, dest)
             if iterations == 1:
                 break
-            
+
             if len(path) == 0:
                 raise Exception("Could not generate a path.")
 
